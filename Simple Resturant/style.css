@@ -1,0 +1,280 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+nav.first {
+    max-width: 100%;
+    background-color: whitesmoke;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15em;
+    box-shadow: 1px 1px 15px 1px rgb(184, 173, 173);
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+nav.first img {
+    display: inline-block;
+    margin-top: -10px;
+}
+
+nav.first ul {
+    list-style-type: none;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6em;
+    visibility: hidden;
+}
+
+nav.first>ul li {
+    display: inline-block;
+    font-size: 2em;
+    color: black;
+    transition: 250ms color, 250ms text-shadow;
+}
+
+nav.first>ul li:hover {
+    color: navy;
+    text-shadow: 2px 2px 5px navy, 0px 0px 15px indigo;
+}
+
+nav.first .menu {
+    width: 30px;
+    height: 30px;
+    border-top: 4px solid black;
+    border-bottom: 4px solid black;
+    position: relative;
+    cursor: pointer;
+}
+
+nav.first .menu::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60%;
+    border-bottom: 4px solid black;
+}
+
+
+/* Upper Section starts from here */
+
+section.upper {
+    max-width: 75%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 2em auto;
+    gap: 6em;
+}
+
+section.upper>.img img {
+    display: block;
+    max-width: 100%;
+}
+
+section.upper>.text .discount {
+    font-size: .875em;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+    color: #FFFF;
+    background: #149F39;
+    display: inline-block;
+    padding: .2em .4em;
+    border-radius: .25em;
+}
+
+section.upper>.text .head {
+    font-size: 4.5em;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+}
+
+section.upper>.text .small {
+    font-size: 1em;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin-bottom: 1em;
+}
+
+section.upper>.text .explore {
+    text-decoration: none;
+    color: black;
+    font-size: 1.5em;
+    font-weight: bold;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+    background-color: #FFC066;
+    /* background-color: #F99300; */
+    padding: .5em .8em;
+    border-radius: .5em;
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+    transition: 500ms color;
+}
+
+section.upper>.text .explore::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    transition: 500ms transform, 500ms background-color;
+    z-index: -1;
+}
+
+section.upper>.text .explore:hover::before {
+    transform: scale(100);
+    background-color: #F99300;
+}
+
+section.upper>.text .explore:hover {
+    color: white;
+}
+
+
+
+/* Cards section starts from here */
+
+section.cards {
+    max-width: 75%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 4em auto;
+    gap: 5em;
+}
+
+.card1,
+.card2,
+.card3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+    padding: .2em .4em;
+    transition: 300ms box-shadow;
+}
+
+:is(.card1, .card2, .card3):hover {
+    box-shadow: 1px 1px 5px rgb(138, 130, 130);
+}
+
+.card1_text,
+.card2_text,
+.card3_text {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+hr {
+    max-width: 75%;
+    margin: 0 auto;
+    border: 0;
+    border-top: 4px solid #d0cbcb;
+}
+
+
+
+/* Food Section starts form here */
+
+section.foods {
+    max-width: 75%;
+    margin: 2em auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2em;
+}
+
+section.foods .our_menu {
+    text-decoration: none;
+    color: white;
+    font-size: 1.5em;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: #149F39;
+    padding: .1em .4em;
+    border-radius: .25em;
+
+}
+
+section.foods>.explore {
+    font-size: 2.25em;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 500;
+}
+
+section.foods .foods_items {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2em;
+}
+
+:is(.col1, .col2, .col3) img {
+    border-radius: 5px;
+    margin: 5px;
+}
+
+
+/* Last Section starts from here */
+
+footer.last {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #E5E5E5;
+    padding: 3em 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    gap: 5em;
+}
+
+footer.last>:is(.main_link, .support, .join) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+footer.last a {
+    text-decoration: none;
+    color: black;
+    font-size: .875em;
+}
+
+footer.last>.main_link .Main_Link {
+    display: inline-block;
+    color: #565656;
+    font-size: 1.125em;
+    margin-bottom: 1em;
+    font-weight: 500;
+}
+
+footer.last>.support .Support {
+    display: inline-block;
+    color: #565656;
+    font-size: 1.125em;
+    margin-bottom: 2em;
+    font-weight: 500;
+}
+
+footer.last>.join .Join {
+    display: inline-block;
+    color: #565656;
+    font-size: 1.125em;
+    margin-bottom: 2em;
+    font-weight: 500;
+}
