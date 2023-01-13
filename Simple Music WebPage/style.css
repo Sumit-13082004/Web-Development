@@ -1,0 +1,350 @@
+*,*::after,*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    scroll-behavior: smooth;
+}
+
+nav.navigation{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #270082;
+    gap: 50em;
+    padding: .87em;
+}
+
+nav.navigation>.nav_home a{
+    display: inline-block;
+    font-size: 1.5em;
+    font-weight: bold;
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+nav.navigation>.nav_menu ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style-type: none;
+    gap: 1.875em;
+}
+
+nav.navigation>.nav_menu ul>li a{
+    text-decoration: none;
+    font-size: 1.125em;
+    color: #FFFFFF;
+    /* background-color: tomato; */
+    position: relative;
+}
+
+nav.navigation>.nav_menu ul>li a::before{
+    content: '';
+    position: absolute;
+    inset: 0;
+    top: 100%;
+    border-bottom: 2px solid white;
+    transform: scale(0);
+    transition: 250ms transform;
+}
+
+nav.navigation>.nav_menu ul>li a:hover::before{
+    transform: scale(1);
+}
+
+/* myTunes Section starts from here */
+
+section.mytunes{
+    min-height: 60.5625em;
+    /* background-color: tomato; */
+    background-image: url('images/hero_image.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+section.mytunes .mytunes_text{
+    max-width: 52.5625em;
+    min-height: 15.1875em;
+}
+
+section.mytunes .mytunes_text h1{
+    font-size: 4.5em;
+    color: #FFFFFF;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+section.mytunes .mytunes_text .mytunes_text_one{
+    font-size: 1.5em;
+    color: #FFFFFF;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+section.mytunes .mytunes_text .mytunes_text_two{
+    font-size: 1.125em;
+    color: #FFFFFF;
+    text-align: center;
+    letter-spacing: 2px;
+    line-height: 2rem;
+}
+
+
+/* Music Section starts from here */
+
+section.music{
+    min-height: 64em;
+    background: #281154;
+    padding-top: 1px;
+}
+
+section.music .music_text{
+    max-width: 60.625em;
+    margin: 2em auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5em;
+}
+
+section.music>.music_text .music_text_head :is(h1,i){
+    display: inline-block;
+    font-size: 2.25em;
+    color: #FFFFFF;
+}
+
+section.music>.music_text .music_text_one{
+    font-size: 1.5em;
+    color: #FFFFFF;
+    font-weight: 700;
+    margin-bottom: .8rem;
+}
+
+section.music>.music_text .music_text_two{
+    font-size: 1.125em;
+    color: #FFFFFF;
+    font-weight: 700;
+    text-align: center;
+
+}
+
+section.music>.music_text .music_text_button{
+    text-decoration: none;
+    color: #FFFFFF;
+    padding: .8em;
+    background-color: rgb(247, 73, 42);
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.211),
+    inset 2px 2px 5px rgba(255, 255, 255, 0.296),
+    inset -2px -2px 5px black;
+}
+
+section.music>.music_text .music_text_button:focus{
+    box-shadow:2px 2px 5px rgba(0, 0, 0, 0.211),
+    inset 2px 2px 5px rgba(255, 255, 255, 0.296);
+}
+
+section.music>.music_text .message{
+    font-size: .875em;
+    font-weight: 300;
+    color: #FFFFFF;
+}
+
+
+/* Collection Section starts from here */
+
+section.collection{
+    position: relative;
+    min-height: 64em;
+    padding-top: 1px;
+}
+
+section.collection .ipad_image{
+    max-width: 80em;
+    position: absolute;
+    top: -40%;
+    left: 20%;
+}
+
+section.collection .ipad_image img{
+    width: 100%;
+    display: block;
+}
+
+section.collection .collection_text{
+    max-width: 65.3125em;
+    margin: 18em auto;
+}
+
+section.collection>.collection_text .collection_text_one{
+    font-size: 1.5em;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+section.collection>.collection_text .collection_text_two{
+    font-size: 1.125em;
+    font-weight: 300;
+    text-align: center;
+    line-height: 1.5em;
+    margin-bottom: 1.5em;
+}
+
+section.collection>.collection_text .collection_text_button{
+    display: block;
+    width: 10%;
+    text-align: center;
+    margin: 0 auto;
+    text-decoration: none;
+    color: white;
+    padding: .5em;
+    border-radius: 10px;
+    background-color: #37008E;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.211),
+    inset 2px 2px 5px rgba(255, 255, 255, 0.296),
+    inset -2px -2px 5px rgba(0, 0, 0, 0.351);  
+}
+
+section.collection .macbook_image{
+    max-width: 49.5em;
+    margin: 0em auto;
+    margin-top: -12em;
+    margin-bottom: 5em;
+}
+
+section.collection .macbook_image img{
+    width: 100%;
+}
+
+
+/* Video Section starts from here */
+
+section.video{
+    max-width: 100%;
+    
+}
+
+section.video video{
+    width: 100%;
+    height: 43.8125em;
+    box-shadow: 2px 2px 15px 5px black;
+}
+
+/* Gift Card Section starts from here */
+
+section.gift_card{
+    min-height: 15em;
+    /* background-color: tomato; */
+    padding-top: 1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2em;
+    padding: 4em 5em;
+}
+
+section.gift_card .gift_card_image{
+    max-width: 29.25em;
+}
+
+section.gift_card .gift_card_image img{
+    width: 100%;
+}
+
+section.gift_card>.gift_card_text{
+    max-width: 36em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1em;
+}
+
+section.gift_card>.gift_card_text .gift_card_text_head{
+    font-size: 1.5em;
+    font-weight: 700;
+}
+
+section.gift_card>.gift_card_text .gift_card_text_one{
+    font-size: .875em;
+    font-weight: 400;
+    line-height: 1.8125rem;
+}
+
+section.gift_card>.gift_card_text .gift_card_text_two{
+    font-size: .875em;
+    font-weight: 400;
+}
+
+section.gift_card>.gift_card_text .gift_card_text_message{
+    text-decoration: none;
+    font-size: 1.125em;
+    font-weight: 300;
+    color: white;
+    padding: .3em .6em;
+    border-radius: 7px;
+    background-color: #37008E;
+}
+
+hr{
+    width: 100%;
+    border: 0;
+    border-top: 2px solid #9E9E9E;
+
+}
+
+/* Footer Section starts from here */
+
+section.footer{
+    min-height: 15em;
+    padding-top: 1px;
+    background-color: #1B0058;
+    padding: 2em 4em;
+}
+
+section.footer .footer_text{
+    max-width: 59.315em;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4em;
+}
+
+section.footer .footer_text h3{
+    font-size: 1.125em;
+    color: #FFFFFF;
+    font-weight: 500;
+    border-bottom: 2px solid white;
+    margin-bottom: 1em;
+}
+
+section.footer .footer_text ul li{
+    list-style-type: none;
+}
+
+section.footer>.footer_text ul>li a{
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+section.footer>.footer_text ul>li a:hover{
+    text-decoration: underline;
+}
+
+section.copyright{
+    background-color: #270082;
+    padding: 1em;
+    text-align: center;
+    color: #FFFFFF;
+}
